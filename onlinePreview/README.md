@@ -1,0 +1,1 @@
+核心代码是fiepreview的代码 地址：https://github.com/kekingcn/kkFileView
