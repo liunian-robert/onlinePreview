@@ -47,7 +47,7 @@ media文档预览：
 ![image](https://github.com/liunian-robert/onlinePreview/blob/master/onlinePreview/media.png)
 
 
-无权文档预览：
+无权文档预览(返回内容通过fastdfs中http.conf配置 详情可看http://srobert.pythonanywhere.com/article/7)：
 
 ![image](https://github.com/liunian-robert/onlinePreview/blob/master/onlinePreview/error.png)
 
