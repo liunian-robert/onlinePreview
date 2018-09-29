@@ -20,10 +20,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.*;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
-import java.util.UUID;
+import java.util.*;
 
 /**
  *
@@ -54,10 +51,18 @@ public class FileController {
             outFile.mkdirs();
         }
         FastDFSClient client = new FastDFSClient();
-        String filename = client.upload(file,null);
+        Map<String,String> mps = new HashMap<String,String>();
+        mps.put("fileName",file.getOriginalFilename());
+        String suffix = file.getOriginalFilename().substring(file.getOriginalFilename().lastIndexOf(".")+1);
+        mps.put("fileExtName",suffix);
+        mps.put("fileLength",file.getSize()+"");
+        String filename = client.upload(file,mps);
         if (StringUtils.isNotEmpty(filename)){
             int index = filename.lastIndexOf("/");
             fileName = filename.substring(index+1,filename.length());
+            if (suffix.length() > 6) {
+                fileName  = fileName.substring(0,fileName.lastIndexOf(".")+1)+suffix;
+            }
         }
         try(InputStream in = file.getInputStream();
             OutputStream ot = new FileOutputStream(fileDir + demoPath + fileName)){
@@ -88,6 +93,12 @@ public class FileController {
     public String fastdfsUrl(String fileName) throws JsonProcessingException {
         if (fileName.contains("/")) {
             fileName = fileName.substring(fileName.lastIndexOf("/") + 1);
+        }
+        if (fileName != null && !fileName.equals("")) {
+            String suffix = fileName.substring(fileName.lastIndexOf(".")+1);
+            if (suffix.length() > 6) {
+                fileName = fileName.substring(0,fileName.lastIndexOf(".")+1)+suffix.substring(0,6);
+            }
         }
         String token = FastDFSClient.getToken(fastDFSConfig.getFile_prefix()+fileName,fastDFSConfig.getHttp_secret_key());
         String fastdfsUrl = "http://192.168.3.103/group0/M00/00/00/" + fileName +"?" + token;
