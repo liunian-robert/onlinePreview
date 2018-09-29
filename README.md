@@ -10,3 +10,11 @@
 2.文件访问通过nginx-fastdfs module进行，效率更高，更符合实际使用环境
 
 3.文件访问进行token权限控制
+
+4.文件的存储进行了去重处理(FastDHT)
+
+
+
+如果对fastdfs安装及配置不熟悉可参考：http://srobert.pythonanywhere.com/article/7
+
+fastdfs文件存储的去重问题(FastDHT)可参考：http://srobert.pythonanywhere.com/article/30
