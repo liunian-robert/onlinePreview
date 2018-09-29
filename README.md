@@ -4,6 +4,7 @@
 
 
 在kkFileView基础上增加如下内容：
+
 1.文件存储在fastdfs文件系统中
 
 2.文件访问通过nginx-fastdfs module进行，效率更高，更符合实际使用环境
