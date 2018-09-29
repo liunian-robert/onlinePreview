@@ -1897,7 +1897,7 @@ var validateFileURL = void 0;
       }
       var fileOrigin = new URL(file, window.location.href).origin;
       if (fileOrigin !== viewerOrigin) {
-        return  '/getCorsFile?urlPath=' + file;
+        return  '/getCorsFile?urlPath=' + encodeURIComponent(file);
       }
     } catch (ex) {
       var message = ex && ex.message;
@@ -1933,7 +1933,9 @@ function webViewerInitialized() {
   var file = void 0;
   var queryString = document.location.search.substring(1);
   var params = (0, _ui_utils.parseQueryString)(queryString);
-  file = 'file' in params ? params.file : appConfig.defaultUrl;
+  //file = 'file' in params ? params.file : appConfig.defaultUrl;
+  //存储方式为FastDFS时存在bug
+  file = queryString.substring(queryString.indexOf("=")+1);
   file = validateFileURL(file);
   var waitForBeforeOpening = [];
   var fileInput = document.createElement('input');
