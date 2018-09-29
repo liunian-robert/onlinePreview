@@ -21,21 +21,30 @@ fastdfs文件存储的去重问题(FastDHT)可参考：http://srobert.pythonanyw
 
 如何启动可参考kkFileView：https://github.com/kekingcn/kkFileView
 
-图片预览如图：
+图片预览：
 
 ![image](https://github.com/liunian-robert/onlinePreview/blob/master/onlinePreview/picture.png)
 
-doc文档预览如图：
+doc文档预览：
 
 ![image](https://github.com/liunian-robert/onlinePreview/blob/master/onlinePreview/doc.png)
 
-ppt文档预览如图：
+ppt文档预览：
 
 ![image](https://github.com/liunian-robert/onlinePreview/blob/master/onlinePreview/ppt.png)
 
-excle文档预览如图：
+excle文档预览：
 
 ![image](https://github.com/liunian-robert/onlinePreview/blob/master/onlinePreview/excle.png)
+
+
+media文档预览：
+
+![image](https://github.com/liunian-robert/onlinePreview/blob/master/onlinePreview/media.png)
+
+无权文档预览：
+
+![image](https://github.com/liunian-robert/onlinePreview/blob/master/onlinePreview/error.png)
 
 
 
