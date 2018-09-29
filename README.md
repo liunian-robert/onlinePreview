@@ -18,3 +18,8 @@
 如果对fastdfs安装及配置不熟悉可参考：http://srobert.pythonanywhere.com/article/7
 
 fastdfs文件存储的去重问题(FastDHT)可参考：http://srobert.pythonanywhere.com/article/30
+
+如何启动可参考kkFileView：https://github.com/kekingcn/kkFileView
+
+doc预览如图：
+
