@@ -25,13 +25,16 @@ fastdfs文件存储的去重问题(FastDHT)可参考：http://srobert.pythonanyw
 
 ![image](https://github.com/liunian-robert/onlinePreview/blob/master/onlinePreview/picture.png)
 
+
 doc文档预览：
 
 ![image](https://github.com/liunian-robert/onlinePreview/blob/master/onlinePreview/doc.png)
 
+
 ppt文档预览：
 
 ![image](https://github.com/liunian-robert/onlinePreview/blob/master/onlinePreview/ppt.png)
+
 
 excle文档预览：
 
@@ -41,6 +44,7 @@ excle文档预览：
 media文档预览：
 
 ![image](https://github.com/liunian-robert/onlinePreview/blob/master/onlinePreview/media.png)
+
 
 无权文档预览：
 
